@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <div class="slideshow"></div>
+    <div class="container">
+      <div class="form-container">
+        <form action="/submit" method="post">
+          <h1 class="title-form">Rate Your Favorite Movie</h1>
+          <div class="personal-info">
+            <h2 class="title">User Details</h2>
+            <div class="input-container">
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                "
+              >
+                <div class="input-wrapper">
+                  <input
+                    type="text"
+                    id="userName"
+                    placeholder="Full Name"
+                    name="userName"
+                  />
+                  <span class="error"></span>
+                </div>
+                <div class="input-wrapper">
+                  <input
+                    type="text"
+                    id="userEmail"
+                    placeholder="Email"
+                    name="userEmail"
+                  />
+                  <span class="error"></span>
+                </div>
+              </div>
+              <div class="uploader-contianer">
+                <div class="uploader">
+                  <p>Upload Your Image</p>
+                  <img src="images/uploader-avatar.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="movie-info">
+            <h2 class="title">Movie Details</h2>
+            <div class="input-container">
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                "
+              >
+                <div class="input-wrapper">
+                  <input
+                    type="text"
+                    id="movieName"
+                    name="movieName"
+                    placeholder="Movie Name"
+                  />
+                  <span class="error"></span>
+                </div>
+                <div class="input-wrapper">
+                  <input
+                    type="text"
+                    id="movieRate"
+                    name="movieRate"
+                    placeholder="Movie Rate (1-10)"
+                  />
+                  <span class="error"></span>
+                </div>
+              </div>
+              <div class="uploader-contianer">
+                <div class="uploader">
+                  <p>Upload Movie Image</p>
+                  <img src="images/uploader-image.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="button-wrapper">
+            <button class="submit-btn" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
