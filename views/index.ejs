@@ -24,8 +24,10 @@
                     id="userName"
                     name="userName"
                     placeholder="Full Name"
+                    value="<%= typeof userName !== 'undefined' ? userName : '' %>"
                   />
-                  <% if (typeof errors !== 'undefined' && errors.userName) { %>
+                  <% if (typeof errors !== 'undefined' && errors.userName &&
+                  !userName) { %>
                   <span class="error"><%= errors.userName %> </span>
                   <% } %>
                 </div>
@@ -35,8 +37,10 @@
                     id="userEmail"
                     name="userEmail"
                     placeholder="Email"
+                    value="<%= typeof userEmail !== 'undefined' ? userEmail : '' %>"
                   />
-                  <% if (typeof errors !== 'undefined' && errors.userEmail) { %>
+                  <% if (typeof errors !== 'undefined' && errors.userEmail &&
+                  !userEmail) { %>
                   <span class="error"><%= errors.userEmail %> </span>
                   <% } %>
                 </div>
@@ -55,8 +59,10 @@
                     id="movieName"
                     name="movieName"
                     placeholder="Movie Name"
+                    value="<%= typeof movieName !== 'undefined' ? movieName : '' %>"
                   />
-                  <% if (typeof errors !== 'undefined' && errors.movieName) { %>
+                  <% if (typeof errors !== 'undefined' && errors.movieName &&
+                  !movieName) { %>
                   <span class="error"><%= errors.movieName %> </span>
                   <% } %>
                 </div>
@@ -66,8 +72,10 @@
                     id="movieRate"
                     name="movieRate"
                     placeholder="Movie Rate (1-10)"
+                    value="<%= typeof movieRate !== 'undefined' ? movieRate : '' %>"
                   />
-                  <% if (typeof errors !== 'undefined' && errors.movieRate) { %>
+                  <% if (typeof errors !== 'undefined' && errors.movieRate &&
+                  !movieRate) { %>
                   <span class="error"><%= errors.movieRate %> </span>
                   <% } %>
                 </div>
