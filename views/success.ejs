@@ -4,12 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Success Page</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/success.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <div class="container">
       <div class="success-container">
-        <p>You have successfully submit the movie</p>
+        <p style="color: #2a912a !important; font-size: 30px; font-weight: 700">
+          You Have Successfully Submit The Movie
+        </p>
+        <div class="submitted-movie">
+          <div class="items">
+            <p class="title">Movie Name:</p>
+            <p class="detail"><%= movieName %></p>
+          </div>
+          <div class="items">
+            <p class="title">Movie Rate:</p>
+            <p class="detail">
+              <%= movieRate %><span class="fa fa-star icon"></span>
+            </p>
+          </div>
+        </div>
+        <div class="button-wrapper">
+          <button class="submit-more">
+            <a href="/">Submit Another Movie</a>
+          </button>
+        </div>
+      </div>
+
+      <div class="movie-list">
+        <h1 style="color: #333">All Movies Have Been Submitted</h1>
+        <% if (submittedMovies && submittedMovies.length > 0) { %>
+        <div class="movie-container">
+          <% submittedMovies.forEach(item => { %>
+          <div class="movie-box">
+            <div class="items">
+              <p class="title">name:</p>
+              <p class="detail"><%= item.title %></p>
+            </div>
+            <div class="items">
+              <p class="title">rate:</p>
+              <p class="detail">
+                <%= item.rating %><span class="fa fa-star icon"></span>
+              </p>
+            </div>
+            <div class="items">
+              by:
+              <div class="user-details">
+                <p class="user-detail"><%= item.userName %></p>
+                <p class="user-detail"><%= item.userEmail %></p>
+              </div>
+            </div>
+          </div>
+          <% }); %>
+        </div>
+        <% } else { %>
+        <p>No ratings available yet.</p>
+        <% } %>
       </div>
     </div>
   </body>

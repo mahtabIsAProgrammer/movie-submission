@@ -4,47 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
-    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
-    <div class="slideshow"></div>
     <div class="container">
       <div class="form-container">
-        <form action="/submit" method="post">
+        <form id="#movieForm" action="/submit" method="post">
           <h1 class="title-form">Rate Your Favorite Movie</h1>
           <div class="personal-info">
             <h2 class="title">User Details</h2>
             <div class="input-container">
               <div
-                style="
-                  display: flex;
-                  flex-direction: column;
-                  justify-content: space-between;
-                "
+                style="gap: 12px; display: flex; justify-content: space-between"
               >
                 <div class="input-wrapper">
                   <input
                     type="text"
                     id="userName"
-                    placeholder="Full Name"
                     name="userName"
+                    placeholder="Full Name"
                   />
-                  <span class="error"></span>
+                  <% if (typeof errors !== 'undefined' && errors.userName) { %>
+                  <span class="error"><%= errors.userName %> </span>
+                  <% } %>
                 </div>
                 <div class="input-wrapper">
                   <input
-                    type="text"
+                    type="email"
                     id="userEmail"
-                    placeholder="Email"
                     name="userEmail"
+                    placeholder="Email"
                   />
-                  <span class="error"></span>
-                </div>
-              </div>
-              <div class="uploader-contianer">
-                <div class="uploader">
-                  <p>Upload Your Image</p>
-                  <img src="images/uploader-avatar.png" />
+                  <% if (typeof errors !== 'undefined' && errors.userEmail) { %>
+                  <span class="error"><%= errors.userEmail %> </span>
+                  <% } %>
                 </div>
               </div>
             </div>
@@ -53,11 +47,7 @@
             <h2 class="title">Movie Details</h2>
             <div class="input-container">
               <div
-                style="
-                  display: flex;
-                  flex-direction: column;
-                  justify-content: space-between;
-                "
+                style="gap: 12px; display: flex; justify-content: space-between"
               >
                 <div class="input-wrapper">
                   <input
@@ -66,7 +56,9 @@
                     name="movieName"
                     placeholder="Movie Name"
                   />
-                  <span class="error"></span>
+                  <% if (typeof errors !== 'undefined' && errors.movieName) { %>
+                  <span class="error"><%= errors.movieName %> </span>
+                  <% } %>
                 </div>
                 <div class="input-wrapper">
                   <input
@@ -75,13 +67,9 @@
                     name="movieRate"
                     placeholder="Movie Rate (1-10)"
                   />
-                  <span class="error"></span>
-                </div>
-              </div>
-              <div class="uploader-contianer">
-                <div class="uploader">
-                  <p>Upload Movie Image</p>
-                  <img src="images/uploader-image.png" />
+                  <% if (typeof errors !== 'undefined' && errors.movieRate) { %>
+                  <span class="error"><%= errors.movieRate %> </span>
+                  <% } %>
                 </div>
               </div>
             </div>

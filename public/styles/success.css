@@ -1,0 +1,125 @@
+.container {
+    width: 100%;
+    z-index: 55;
+    display: flex;
+    padding: 2em 0;
+    position: relative;
+    flex-direction: column;
+}
+
+.success-container {
+    opacity: 0; 
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px 40px;
+    max-width: 750px;
+    border-radius: 5px;
+    transform: scale(0); 
+    background-color: #f5f5f5;
+    animation: popUp 0.7s forwards;
+}
+.submitted-movie {
+    gap: 70px;
+    margin: 42px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button-wrapper {
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 16px;
+    justify-content: center;
+}
+.submit-more {
+  width:270px;
+}
+.submit-more a {
+    font-size: 16px;
+    text-decoration-line: none;
+    color: white;
+}
+
+.title {
+    text-transform: capitalize;
+}
+.detail {
+    color: #333;
+    padding: 6px;
+    display: flex;
+    font-size: 18px;
+    font-weight: 700;
+    align-items: center;
+    text-transform: capitalize;
+}
+.icon {
+    font-size: 15px !important;
+    margin-left: 2px;
+    color:#a78604
+}
+.items {
+    gap:23px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.movie-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.movie-container {
+    gap: 20px;
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top: 1em;
+}
+.movie-box {
+    gap: 12px;
+    padding: 12px;
+    display: flex;
+    border-radius: 6px;
+    position: relative;
+    flex-direction: column;
+    max-width: 190px;
+    background-color: #f5f5f5;
+    animation: slideIn 1s forwards;
+}
+
+.movie-box .detail {
+    font-size: 12px;
+}
+.movie-box .title {
+    font-size: 14px;
+}
+.movie-box .icon {
+    font-size: 12px !important;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+.thumbnail{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.user-detail {
+    color: #4d4c4c;
+    font-size: 12px;
+    margin-left: 4px;
+}
+

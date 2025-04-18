@@ -1,0 +1,85 @@
+/* General Style */
+body {
+    margin:0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #e1edf0; 
+    font-family: 'Roboto', Arial, sans-serif;
+    }
+
+    h2 {
+        margin:1em 0;
+    }
+    p {
+        margin: 0;
+    }
+    button, .btn {
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.25rem;
+        background-color: #8fc0c7;
+        transition: 0.3s;
+      }
+      
+      button:hover, .btn:hover {
+        background-color: #75acb4; 
+      }
+
+      input {
+        width: 330px;
+        padding: 12px 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        outline: none;
+        }
+
+        input:focus {
+            border-color: #75acb4; /* MUI primary color */
+            box-shadow: 0 0 5px #75acb4; /* Focus shadow */
+        }
+
+        input:hover {
+            border-color: #8fc0c7; /* Darker border on hover */
+        }
+
+        input::placeholder {
+            color: #aaa; /* Placeholder color */
+            opacity: 1; /* Ensure placeholder is fully opaque */
+        }
+
+        input:focus::placeholder {
+            color: transparent; /* Hide placeholder on focus */
+    }
+
+
+
+/* Animation */
+
+@keyframes popUp {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%); /* Start from the left */
+        opacity: 0; /* Start invisible */
+    }
+    to {
+        transform: translateX(0); /* End at original position */
+        opacity: 1; /* End visible */
+    }
+}
+    
